@@ -1,8 +1,12 @@
 
 
-a_var = int(input('Введите результат первого дня: '))
-b_var = int(input('Введите общий результат который вы ищите: '))
+a_var = input('Введите результат первого дня: ')
+b_var = input('Введите общий результат который вы ищите: ')
 day = 1
+
+if a_var.isdigit() and b_var.isdigit():
+    a_var = int(a_var)
+    b_var = int(b_var)
 
 while True:
 

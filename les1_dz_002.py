@@ -1,11 +1,15 @@
 #2. Пользователь вводит время в секундах. Переведите время в часы, минуты и секунды и выведите в формате чч:мм:сс. Используйте форматирование строк.
 
-user_time = int(input('Введите время в секундах: '))
+user_time = input('Введите время в секундах: ')
 
+if user_time.isdigit():
+    user_time = int(user_time)
 
 time_in_sec = user_time % 60
 time_in_min = (user_time // 60) % 60
 time_in_hour = user_time // 3600
+
+
 
 if time_in_sec < 10:
     time_in_sec = '0' + str(time_in_sec)

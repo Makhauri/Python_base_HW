@@ -3,12 +3,16 @@
 profit = input('Введите прибыль вашего предприятия: ')
 cost = input('Введите издержки вашего предприятия: ')
 
-if int(profit) < int(cost):
+if profit.isdigit() and cost.isdigit():
+    profit = int(profit)
+    cost = int(cost)
+
+if profit < cost:
     print('Ваше предприятие убыточно')
 else:
     print('Ваше предприятие прибыльно')
-    print(f'Соотношение прибыли к убыткам = 1 к {round(int(profit)/int(cost),1)}')
+    print(f'Соотношение прибыли к убыткам = 1 к {round(profit/cost,1)}')
 
     staff = input('Введите число сотрудников: ')
-    print(f'Прибыль на каждого сотрудника составляет: {int(profit)//int(staff)} рублей {int(profit)%int(staff)} копеек')
+    print(f'Прибыль на каждого сотрудника составляет: {profit//staff} рублей {profit%staff} копеек')
 
