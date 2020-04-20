@@ -7,3 +7,4 @@ for i, t in enumerate(user_num.split()):
         print(i, t)
     else:
         print(i, t[:10])
+
